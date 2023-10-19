@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.navigationtest.MainFragment"
+        android:label="メイン画面"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_zukanFragment"
+            app:destination="@id/zukanFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_optionFragment"
+            app:destination="@id/optionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/zukanFragment"
+        android:name="com.example.navigationtest.ZukanFragment"
+        android:label="図鑑画面"
+        tools:layout="@layout/fragment_zukan" />
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.example.navigationtest.CameraFragment"
+        android:label="写真画面"
+        tools:layout="@layout/fragment_camera" />
+    <fragment
+        android:id="@+id/optionFragment"
+        android:name="com.example.navigationtest.OptionFragment"
+        android:label="設定画面"
+        tools:layout="@layout/fragment_option" />
+</navigation>
